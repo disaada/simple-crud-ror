@@ -17,10 +17,10 @@
 development:
     adapter: postgresql
     encoding: unicode
-    database: process.env.DATABASE_NAME
+    database: belajaruby
     pool: 5
-    username: process.env.DATABASE_USERNAME
-    password: process.env.DATABASE_PASSWORD
+    username: belajaruby
+    password: belajaruby
     timeout: 5000
     host: localhost
     port: 5432
@@ -49,10 +49,10 @@ development:
 test:
     adapter: postgresql
     encoding: unicode
-    database: process.env.DATABASE_NAME
+    database: belajaruby
     pool: 5
-    username: process.env.DATABASE_USERNAME
-    password: process.env.DATABASE_USERNAME
+    username: belajaruby
+    password: belajaruby
     timeout: 5000
     host: localhost
     port: 5432
@@ -60,10 +60,10 @@ test:
 production:
     adapter: postgresql
     encoding: unicode
-    database: process.env.DATABASE_NAME
+    database: <%= ENV['DATABASE_NAME'] %>
     pool: 5
-    username: process.env.DATABASE_USERNAME
-    password: process.env.DATABASE_USERNAME
+    username: <%= ENV['DATABASE_USERNAME'] %>
+    password: <%= ENV['DATABASE_PASSWORD'] %>
     timeout: 5000
     host: localhost
     port: 5432
